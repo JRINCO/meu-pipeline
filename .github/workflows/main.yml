@@ -1,0 +1,23 @@
+name: Meu Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar Projeto
+        uses: actions/checkout@v4
+
+      - name: Simular Build
+        run: echo "Preparando sistema..."
+
+      - name: Simular Staging
+        run: echo "Testando ambiente..."
+
+      - name: Simular Deploy
+        run: echo "Sistema publicado!"
